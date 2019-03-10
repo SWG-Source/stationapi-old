@@ -1,14 +1,10 @@
-# stationapi [![Build Status](https://travis-ci.org/apathyboy/stationapi.svg?branch=master)](https://travis-ci.com/apathyboy/stationapi) #
+# stationapi
 
 A base library at the core of applications that implement chat and login functionality across galaxies.
 
 # stationchat
 
 An open implementation of the chat gateway that SOE based games used to provide various social communication features such as mail, custom chat rooms, friend management, etc.
-
-Like my work and want to support my free and open-source contributions? 
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8KCAU8HB9J7YU)
 
 ## Implementation ##
 
