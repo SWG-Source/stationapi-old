@@ -34,14 +34,17 @@ public:
 
     void Tick() {
         udpManager_->GiveTime();
-
-        auto remove_iter
-            = std::remove_if(std::begin(clients_), std::end(clients_), [](auto& client) {
-                  return client->GetConnection()->GetStatus() == UdpConnection::cStatusDisconnected;
-              });
-
-        if (remove_iter != std::end(clients_))
-            clients_.erase(remove_iter);
+        
+        // ??????
+        // not sure what this is or why its here but no bueno
+        //
+        //auto remove_iter
+        //    = std::remove_if(std::begin(clients_), std::end(clients_), [](auto& client) {
+        //          return client->GetConnection()->GetStatus() == UdpConnection::cStatusDisconnected;
+        //      });
+        //
+        //if (remove_iter != std::end(clients_))
+        //    clients_.erase(remove_iter);
 
         OnTick();
     }
