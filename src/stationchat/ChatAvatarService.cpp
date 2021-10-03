@@ -72,12 +72,15 @@ void ChatAvatarService::LoginAvatar(ChatAvatar* avatar) {
 }
 
 void ChatAvatarService::LogoutAvatar(ChatAvatar* avatar) {
-    avatar->isOnline_ = false;
+    if(avatar->isOnline_) // bug fix for redundant logout checks that cause crashes
+    {
+        avatar->isOnline_ = false;
 
-    onlineAvatars_.erase(std::remove_if(
-        std::begin(onlineAvatars_), std::end(onlineAvatars_), [avatar](auto onlineAvatar) {
-            return onlineAvatar->GetAvatarId() == avatar->GetAvatarId();
-        }));
+        onlineAvatars_.erase(std::remove_if(
+            std::begin(onlineAvatars_), std::end(onlineAvatars_), [avatar](auto onlineAvatar) {
+                return onlineAvatar->GetAvatarId() == avatar->GetAvatarId();
+            }));
+    }
 }
 
 void ChatAvatarService::PersistAvatar(const ChatAvatar* avatar) { UpdateAvatar(avatar); }
