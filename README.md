@@ -1,4 +1,4 @@
-# THIS REPO IS NO LONGER MAINTAINED AND WILL BE ARCHIVED SOON!!!
+# THIS REPO IS NO LONGER MAINTAINED AND WILL BE ARCHIVED!!!
 The new repository has been created.  The difference is that it is a FORK from the original creators repository.  Please adjust your links/code/etc. appropriately as this repo will be archived (marked read only).
 
 # stationapi
